@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'angular-reducer';
 
   constructor(private store:Store<{ store:any }>) {
+     // Return Observable ... use subscribe to see states
     this.store.select('store').subscribe((res)=>console.log(res))
   }
 
